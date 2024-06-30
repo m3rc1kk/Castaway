@@ -26,6 +26,9 @@
 
   --button-height: 51px;
   --button-height-alt: 48px;
+  --button-padding-x: 18px;
+
+  --category-padding-x: 16px;
 
   --font-family: 'DM Sans', sans-serif;
 
@@ -167,6 +170,95 @@ ul {
   transition-duration: var(--transition-duration);
 }
 
+.episodes__inner {
+  padding-top: 100px;
+}
+
+.episodes__header {
+  padding-bottom: 64px;
+}
+
+.episodes__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.episodes__header-title {
+  font-size: 64px;
+}
+
+.button {
+  height: var(--button-height);
+  padding-inline: var(--button-padding-x);
+  font-size: 18px;
+  background-color: var(--color-blue);
+  border: 0;
+  color: var(--color-light);
+  font-weight: 400;
+  border-radius: var(--border-radius-small);
+}
+
+.button:hover {
+  background-color: var(--color-light);
+  color: var(--color-blue);
+}
+
+.episodes__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+
+.episodes__item {
+  display: flex;
+  column-gap: 52px;
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-large);
+  padding: 40px;
+}
+
+.episodes__item-body {
+  max-width: 757px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.episodes__item-category {
+  display: inline-block;
+  line-height: 0px;
+  letter-spacing: 0;
+  font-size: 18px;
+  height: 27px;
+  padding: var(--category-padding-x);
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-small);
+  margin-bottom: 48px;
+}
+
+.episodes__item-number {
+  color: var(--color-blue);
+  letter-spacing: 0;
+  font-size: 18px;
+}
+
+.episodes__item-title {
+  font-size: 64px;
+  line-height: 1;
+  margin-top: 18px;
+}
+
+.episodes__item-subtitle {
+  font-size: 22px;
+  letter-spacing: 0;
+  opacity: .7;
+  margin-block: 28px 18px;
+}
+
+
 /* Adaptation */
 @media (max-width: 1300px) {
   .hero__title {
@@ -184,6 +276,12 @@ ul {
   
   .hero__title-underline {
     font-size: 60px;
+  }
+}
+
+@media (max-width: 1264px) {
+  .episodes__item-subtitle {
+    font-size: 14px;
   }
 }
 
@@ -226,7 +324,22 @@ ul {
     height: auto;
   }
 
+  .episodes__item-title {
+    font-size: 40px;
+  }
   
+  .episodes__item-subtitle {
+    font-size: 16px;
+  }
+
+  .episodes__item-category {
+    margin-bottom: 20px;
+  }
+
+  .episodes__item-img {
+    width: 300px;
+    height: auto;
+  }
 }
 
 
@@ -248,6 +361,23 @@ ul {
     padding-top: 20px;
     padding-left: 0;
   }
+
+  .episodes__item-title {
+    font-size: 30px;
+  }
+  
+  .episodes__item-subtitle {
+    font-size: 14px;
+  }
+
+  .episodes__item-img {
+    width: 250px;
+    height: auto;
+  }
+
+  .episodes__header-title {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 652px) {
@@ -266,9 +396,40 @@ ul {
   .hero__title-underline::after {
     width: 90px;
   }
+
+  .episodes__item-button {
+    font-size: 12px;
+    height: 35px;
+  }
+
+  .episodes__header-button{
+    font-size: 12px;
+    height: 35px;
+  }
+
+  .episodes__item-title {
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+  
+  .episodes__item-subtitle {
+    font-size: 12px;
+  }
+
+  .episodes__item-img {
+    width: 200px;
+    height: auto;
+  }
+
+  .episodes__header-title {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 600px) {
+  .episodes__item {
+    column-gap: 15px;
+  }
   .header__inner {
     flex-direction: column;
     row-gap: 14px;
@@ -277,7 +438,57 @@ ul {
   .header__menu-list {
     font-size: 14px;
   }
+
+  .episodes__item-button {
+    font-size: 10px;
+  }
+
+  .episodes__list {
+    row-gap: 20px;
+  }
+
+  .episodes__header {
+    padding-bottom: 30px;
+  }
 }
+
+@media (max-width: 520px) {
+  .episodes__item {
+    padding: 30px;
+  }
+  .episodes__item-category {
+    font-size: 12px;
+  }
+  
+  .episodes__item-button {
+    font-size: 10px;
+    height: 35px;
+  }
+
+  .episodes__item-title {
+    font-size: 18px;
+  }
+  
+  .episodes__item-subtitle {
+    font-size: 10px;
+  }
+
+  .episodes__item-img {
+    width: 180px;
+    height: auto;
+  }
+
+  .episodes__header {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .episodes__inner {
+    padding-top: 60px;
+  }
+}
+
 
 @media (max-width: 450px) {
   .hero__title {
@@ -307,5 +518,22 @@ ul {
   
   .hero__social-images {
     column-gap: 10px;
+  }
+
+  .episodes__item {
+    padding: 15px;
+    column-gap: 5px;
+  }
+
+  .episodes__item-img {
+    width: 150px;
+  }
+
+  .episodes__item-subtitle {
+    font-size: 8px;
+  }
+
+  .episodes__item-number {
+    font-size: 12px;
   }
 }
