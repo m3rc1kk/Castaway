@@ -258,6 +258,121 @@ ul {
   margin-block: 28px 18px;
 }
 
+/* Host */
+
+.host__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 94px;
+  padding-top: 260px;
+}
+
+.host__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 556px;
+}
+
+.host__image {
+  border-radius: var(--border-radius-medium);
+}
+
+.host__body-arrow {
+  width: 112px;
+  height: 112px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.host__body-arrow:hover {
+  opacity: .7;
+  transition-duration: var(--transition-duration);
+}
+
+.host__body-arrow-image {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.host__body-meet {
+  font-size: 18px;
+  color: var(--color-blue);
+  letter-spacing: 0;
+}
+
+.host__body-title {
+  font-size: 65px;
+  margin-bottom: 28px;
+}
+
+.host__body-subtitle {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  opacity: .7;
+  letter-spacing: 0;
+  font-size: 22px;
+}
+
+/* Newsletter */
+
+.newsletter__form {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 60px 75px;
+  padding-inline: 60px;
+  background-color: var(--color-dark);
+  margin-top: 200px;
+  border-radius: var(--border-radius-large);
+  
+}
+
+.newsletter__above-title {
+  font-size: 18px;
+  color: var(--color-blue);
+  letter-spacing: 0;
+}
+
+.newsletter__title {
+  font-size: 72px;
+  max-width: 432px;
+}
+
+.newsletter__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: start;
+}
+
+.newsletter__body-field {
+  width: 522px;
+  height: 82px;
+  background-color: var(--color-gray);
+  padding-left: 19px;
+  font-size: 24px;
+  color: var(--color-light);
+  opacity: .7;
+  border: 0;
+  border-radius: var(--border-radius-small);
+}
+
+.newsletter__body-button {
+  height: var(--button-height-alt);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.newsletter__body-button-text {
+  opacity: .7;
+}
+
+
 
 /* Adaptation */
 @media (max-width: 1300px) {
@@ -276,6 +391,20 @@ ul {
   
   .hero__title-underline {
     font-size: 60px;
+  }
+
+  .host__image {
+    width: 500px;
+    height: auto;
+  }
+
+  .newsletter__title {
+    font-size: 55px;
+    max-width: 400px;
+  }
+
+  .newsletter__body-field {
+    width: 400px;
   }
 }
 
@@ -340,6 +469,46 @@ ul {
     width: 300px;
     height: auto;
   }
+
+  .host__inner {
+    padding-top: 100px;
+  }
+
+  .host__image {
+    width: 400px;
+    height: auto;
+  }
+
+  .host__body-title {
+    font-size: 50px;
+  }
+
+  .host__body-subtitle {
+    font-size: 16px;
+  }
+
+  .host__body-arrow {
+    width: 70px;
+    height: 70px;
+  }
+
+  .host__body-arrow-image {
+    width: 45px;
+    height: 30px;
+  }
+  .newsletter__form {
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .newsletter__title {
+    font-size: 30px;
+  }
+
+  .newsletter__body-field {
+    width: 250px;
+  }
+
 }
 
 
@@ -377,6 +546,24 @@ ul {
 
   .episodes__header-title {
     font-size: 40px;
+  }
+
+  .host__image {
+    width: 300px;
+    height: auto;
+  }
+
+  .host__body-title {
+    font-size: 40px;
+  }
+
+  .host__body-subtitle {
+    font-size: 12px;
+  }
+
+  .host__inner {
+    column-gap: 30px;
+    padding-top: 100px;
   }
 }
 
@@ -424,6 +611,29 @@ ul {
   .episodes__header-title {
     font-size: 30px;
   }
+
+  .newsletter__form {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .newsletter__body {
+    align-items: center;
+  }
+
+  .newsletter__title {
+    letter-spacing: 0;
+    padding-bottom: 10px;
+  }
+
+  .newsletter__above-title {
+    font-size: 12px;
+  }
+
+  .newsletter__body-field {
+    width: 520px;
+    height: 60px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -450,6 +660,43 @@ ul {
   .episodes__header {
     padding-bottom: 30px;
   }
+
+  .host__inner {
+    flex-direction: column;
+  }
+
+  .host__body-arrow {
+    display: none;
+  }
+
+  .host__body {
+    align-items: center;
+  }
+
+  .host__body-meet {
+    margin-bottom: 10px;
+  }
+
+  .host__body-title {
+    margin-bottom: 25px;
+  }
+
+  .host__body-subtitle {
+    row-gap: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .host__image {
+    width: 400px;
+    height: auto;
+  }
+
+  .newsletter__body-field {
+    width: 300px;
+  }
+
+  
 }
 
 @media (max-width: 520px) {
@@ -486,6 +733,10 @@ ul {
 
   .episodes__inner {
     padding-top: 60px;
+  }
+
+  .newsletter__title {
+    font-size: 20px;
   }
 }
 
@@ -535,5 +786,26 @@ ul {
 
   .episodes__item-number {
     font-size: 12px;
+  }
+
+  .host__body-meet {
+    font-size: 12px;
+  }
+
+  .host__body-title {
+   font-size: 30px;
+  }
+
+  .host__body-subtitle {
+    font-size: 10px;
+  }
+
+  .host__image {
+    width: 300px;
+    height: auto;
+  }
+
+  .host__inner {
+    padding-top: 50px;
   }
 }
